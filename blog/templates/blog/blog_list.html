@@ -11,7 +11,7 @@
                   <p class="card-text">{{blog.title}}</p>
                 <img src="{{ blog.image | media_filter}}">
                 <div class="card-body">
-                  <p class="card-text">{{blog.body | truncate_chars}}</p>
+                  <p class="card-text">{{blog.body | truncatechars}}</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <a class="btn btn-outline-primary" href="{% url 'blog:view' blog.pk %}" role="button">Посмотреть</a>

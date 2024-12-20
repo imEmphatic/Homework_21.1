@@ -26,11 +26,11 @@ class BlogCreateView(CreateView):
 
 class BlogListView(ListView):
     model = Blog
+    template_name = 'blog/blog_list.html'
+    context_object_name = 'object_list'
 
-    def get_queryset(self, *args, **kwargs):
-        queryset = super().get_queryset(*args, **kwargs)
-        queryset = queryset.filter(is_published=True)
-        return queryset
+    def get_queryset(self):
+        return Blog.objects.filter(is_published=True)
 
 
 class BlogDetailView(DetailView):
