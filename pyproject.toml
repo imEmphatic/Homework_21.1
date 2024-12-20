@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "Homework21.1"
+version = "0.1.0"
+description = ""
+authors = ["Aleksei Prusikov <imemphatic@yandex.ru>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+django = "^5.1"
+psycopg2 = "^2.9.9"
+psycopg2-binary = "^2.9.9"
+black = "^24.8.0"
+pillow = "^10.4.0"
+ipython = "^8.27.0"
+pytils = "^0.4.1"
+flake8 = "^7.1.1"
+psycopg-binary = "^3.2.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
