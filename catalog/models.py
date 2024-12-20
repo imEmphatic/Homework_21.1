@@ -29,7 +29,7 @@ class Product(models.Model):
         max_length=500, verbose_name="Описание продукта ", help_text="Опишите продукт"
     )
     image = models.ImageField(
-        upload_to="products/",
+        upload_to="products/photo",
         blank=True,
         null=True,
         verbose_name="Изображение продукта",

@@ -12,7 +12,7 @@ from pytils.translit import slugify
 
 class BlogCreateView(CreateView):
     model = Blog
-    fields = ("title", "body", "created_at", 'image')
+    fields = ("title", "body", "created_at", "image")
     success_url = reverse_lazy("blog:list")
 
     def form_valid(self, form):
@@ -26,8 +26,8 @@ class BlogCreateView(CreateView):
 
 class BlogListView(ListView):
     model = Blog
-    template_name = 'blog/blog_list.html'
-    context_object_name = 'object_list'
+    template_name = "blog/blog_list.html"
+    context_object_name = "object_list"
 
     def get_queryset(self):
         return Blog.objects.filter(is_published=True)
@@ -57,7 +57,7 @@ class BlogUpdateView(UpdateView):
         return super().form_valid(form)
 
     def get_success_url(self):
-        return reverse('blog:view', args=[self.kwargs.get('pk')])
+        return reverse("blog:view", args=[self.kwargs.get("pk")])
 
 
 class BlogDeleteView(DeleteView):
